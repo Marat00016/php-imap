@@ -116,6 +116,16 @@ class ClientManager {
     }
 
     /**
+     * Dynamic accounts.
+     * @param array $config
+     * @return Client
+     * @throws Exceptions\MaskNotFoundException
+     */
+    public function dynamicAccount(array $config): Client{
+        return new Client($config);
+    }
+
+    /**
      * Resolve an account.
      * @param string $name
      *
